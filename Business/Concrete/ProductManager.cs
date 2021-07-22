@@ -31,13 +31,13 @@ namespace Business.Concrete
             return new Result(true, Messages.ProductAdded);
         }
 
-        public List<Product> GetAll()
+        public IDataResult<List<Product>> GetAll()
         {
 
-            return _productDal.GetAll();
+            return new DataResult<List<Product>>(_productDal.GetAll(), true, "Ürünler listelendi");
         }
 
-        public List<Product> GetAllByCategoryId(int id)
+        public IDataResult<List<Product>> GetAllByCategoryId(int id)
         {
             return _productDal.GetAll(p => p.CategoryId == id);
         }
