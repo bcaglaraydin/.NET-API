@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class CategoryManager : ICatergoryService
+    public class CategoryManager : ICategoryService
     {
         ICategoryDal _categoryDal;
 
